@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Story - Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Kitchen Story</a>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Admin Panel</h1>
+        <form id="adminLoginForm" class="mt-4">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <div id="adminPanel" style="display:none;">
+            <h2 class="mt-4">Manage Food Items</h2>
+            <form id="addItemForm" class="mt-4">
+                <div class="form-group">
+                    <label for="itemName">Item Name:</label>
+                    <input type="text" class="form-control" id="itemName" name="itemName" required>
+                </div>
+                <div class="form-group">
+                    <label for="itemPrice">Item Price:</label>
+                    <input type="number" class="form-control" id="itemPrice" name="itemPrice" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Add Item</button>
+            </form>
+            <div id="foodItemsList" class="mt-4"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
